@@ -33,15 +33,25 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: rgb(6, 7, 12);
+  background-color: #06070C; /*для людей с ограниченными возможностями*/
   font-family: "Space Grotesk"; 
   font-size: 12px;
+   color: #EAEAEA;                  /* светлый текст для контраста */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
   padding: 0 10%;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
 } 
+/*для людей с ограниченными возможностями*/
+
+/*для бади красивое появление*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 /*service gospodi pomogi*/
 @keyframes fadeBounce {
   0%   { opacity: 0; transform: translateY(40px) scale(0.95); }
@@ -53,6 +63,10 @@ body {
   padding: 60px 10%;
   background: linear-gradient(135deg, #06070C, #111);
   text-align: center;
+}
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .services h2 {
@@ -347,7 +361,7 @@ h2 {
 }
 
 .video-box video {
-  width: 100%;
+  max-width: 100%;
   border-radius: 10px;
   filter: grayscale(100%);
   transition: filter 0.4s ease, transform 0.3s ease;
@@ -370,6 +384,14 @@ h2 {
 
 
 /*музыкальный раздел */
+audio {/*прозрачный плеер */
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  filter: invert(1) hue-rotate(180deg); /* эффект для кнопок  интернт спасибо*/
+}
+
 .music {
   padding: 60px 10%;
   background: linear-gradient(135deg, #06070C, #111);
@@ -406,14 +428,16 @@ h2 {
 .box.music-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 25px rgba(63, 162, 246, 0.5);
+  filter: hue-rotate(90deg) invert(0.1);
 }
+
 
 .music-box h3 {
   color: #3FA2F6;
   margin-bottom: 10px;
 }
 
-* Skills Section */
+/* Skills Section */
 .skills {
   padding: 50px 10%;
   background-color: rgba(6, 7, 12, 0.9);
@@ -604,22 +628,33 @@ h2 {
   color: #00ffea;
 }
 
-/*Футер молитва продолжается*/
+/*Футер молитва продолжается интернет помогает */
 footer.inf {
-  padding: 20px 10%;
-  background: linear-gradient(135deg, #06070C, #111);
-  border-top: 1px solid rgba(63, 162, 246, 0.3);
+  position: relative;
+  background: #06070C;
+  color: #ccc;
   text-align: center;
+  height: 10vh; 
+  overflow: hidden;
 }
 
-footer.inf div {
-  background: #111;
-  padding: 15px 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(63, 162, 246, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: inline-block;
+footer.inf canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
 }
+
+footer.inf span {
+  position: relative;
+  z-index: 1;
+  font-size: 0.9rem;
+  color: #3FA2F6;
+  text-shadow: 0 0 8px #3FA2F6;
+}
+
 
 
 
@@ -713,3 +748,53 @@ footer.inf div {
     padding: 12px;
     font-size: 0.9rem;
   }
+  /* Мобильные (до 480px) */
+@media (max-width: 480px) {
+  .services {
+    padding: 40px 5%;
+  }
+  .services h2 {
+    font-size: 1.4rem;
+  }
+  .service-card {
+    padding: 15px;
+  }
+  .btn {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .burger {
+    display: flex;
+  }
+}
+
+/* Ноутбуки (769px – 1024px) */
+@media (min-width: 1024px) {
+  .nav-links {
+    display: flex;
+    position: relative;  
+    justify-content: space-between;     /* обычное положение */
+    flex-direction: row;    /* горизонтально */
+    width: auto;
+    height: auto;
+    padding: 0;
+    transform: none;
+    opacity: 1;
+    background: none;
+    gap: 25px;
+    font-size: 1rem;
+  }
+  /*убирает некрасивые кружки*/
+  .nav-links li {
+  list-style: none;               /* на всякий случай для каждого li */
+  margin: 0;
+  padding: 0;
+}
+  .burger {
+    display: none;          /* бургер скрыт */
+  }
+
+  .overlay {
+    display: none;          /* overlay не нужен */
+  }
+}

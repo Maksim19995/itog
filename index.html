@@ -98,12 +98,13 @@
     </p>
   </div>
   <div class="box video-box">
-    <video controls>
+    <video controls width="640" height="150">
       <source src="aspir.mp4" type="video/mp4">
       Ваш браузер не поддерживает видео‑тег.
     </video>
   </div>
 </section>
+
 <section class="music">
   <h2>🎵 Музыкальный раздел</h2>
   <p>Для расслабления</p>
@@ -203,12 +204,9 @@
 
 </div>
 <footer class="inf">
-  <div>
-    <span>Лендинг создан в 2025 году.Все права защищены </span>
-  </div>
-
+  <canvas id="footer-stars"></canvas>
 </footer>
-<script>
+<script>/*Честно стырил с интернета */
     // показываем карточки при загрузке страницы
   window.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".services-grid").classList.add("show");
@@ -256,7 +254,64 @@
       }
     });
   });
-  
+  /*раздел выпендрежа */
+  const canvas = document.getElementById("footer-stars");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight * 0.2; // 20% от высоты экрана
+}
+resizeCanvas();
+window.addEventListener("resize", () => {
+  resizeCanvas();
+  initStars(); // пересоздаём звёзды при изменении экрана
+});
+
+let stars = [];
+function initStars() {
+  stars = [];
+  const numStars = Math.floor(canvas.width / 10); // количество зависит от ширины
+  for (let i = 0; i < numStars; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.5,
+      alpha: Math.random(),
+      dAlpha: (Math.random() * 0.02) + 0.005
+    });
+  }
+}
+initStars();
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,255,255,${star.alpha})`;
+    ctx.fill();
+
+    star.alpha += star.dAlpha;
+    if (star.alpha <= 0 || star.alpha >= 1) star.dAlpha *= -1;
+  });
+
+  // Текст внизу
+  ctx.font = "14px Space Grotesk";
+  ctx.fillStyle = "#3FA2F6";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "bottom";
+  ctx.shadowColor = "#3FA2F6";
+  ctx.shadowBlur = 10;
+  ctx.fillText("Лендинг создан в 2025 году. Все права защищены", canvas.width / 2, canvas.height - 20);
+
+  requestAnimationFrame(drawStars);
+}
+
+drawStars();
+
+
 </script>
 </body>
 <html>
