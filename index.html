@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Main_title</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-16.png" sizes="16x16">
+</head>
+<body>
+<header id="header">
+  <nav class="navbar">
+    <div class="logo">Меню</div>
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a class="nav-item active" href="#home">Home</a></li>
+      <li><a class="nav-item" href="#service">Service</a></li>
+      <li><a class="nav-item" href="#porject">Projects</a></li>
+      <li><a class="nav-item" href="#about">About</a></li>
+      <li><a class="nav-item" href="#contacts">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="overlay" id="overlay"> </div>
+<div class="grid-container">
+<main>
+<section class="services" id="service">
+ <div class="services-grid">
+    <div class="service-card">
+      <div class="icon">⚡</div>
+      <h3>Веб‑разработка</h3>
+      <p>Создание адаптивных сайтов с современными анимациями и чистым кодом.</p>
+      <button class="btn">Заказать</button>
+    </div>
+    <div class="service-card">
+      <div class="icon">⚡</div>
+      <h3>ИИ Разработка</h3>
+      <p>Глубокое машииноое обучение и т.д.</p>
+      <button class="btn">Заказать</button>
+    </div>
+    <div class="service-card">
+      <div class="icon">🚀</div>
+      <h3>Оптимизация</h3>
+      <p>Ускорение загрузки, улучшение SEO и повышение производительности сайта.</p>
+      <button class="btn">Заказать</button>
+    </div>
+  </div>
+</section>
+<section id="porject" class="project">
+    <h2>⚙️ Мои проекты</h2>
+    <div class="project-grid">
+        <div class="project-card">
+        <img src="bloc.webp" alt="Blockchain in medicine">
+        <h3>🌐 Blockchain in medical information acquisition</h3>
+        <p>Блокчейн революционизирует управление и обмен медицинской информацией, создавая безопасные реестры ЭМК, оптимизируя процессы и повышая доверие в системе здравоохранения.</p>
+        </div>
+        <div class="project-card">
+        <img src="neuromedic.webp" alt="Project 2">
+        <h3> 🤖 Сайт <a href="neuromedic.by">Neuromedic.by</a></h3>
+        <p>Сайт Нейромедик — это современная платформа, посвящённая интеграции искусственного интеллекта, радиомики и сосудистой хирургии в медицине. Он объединяет визуальные проекты, технологические решения и научные исследования, направленные на повышение точности диагностики, эффективности лечения и безопасности данных пациентов.</p>
+        </div>
+        <div class="project-card">
+        <img src="diagnostica.webp" alt="Project 3">
+        <h3>🧠 Нейросеть для диагностики</h3>
+        <p>AI-модель для анализа медицинских изображений и выявления патологий на основе пирадиомики.Пирадиомика — это практическое использование библиотеки PyRadiomics для извлечения текстурных, статистических и геометрических признаков из медицинских изображений (КТ, МРТ, ПЭТ и др.).</p>
+        </div>
+        <div class="project-card">
+        <img src="vascular.webp" alt="Project 4">
+        <h3>🫀 «Интеллектуальная система поддержки сосудистого хирурга»</h3>
+        <p>«Интеллектуальная система поддержки сосудистого хирурга» — нейросеть анализирует КТ-снимки, выделяет патологические участки, предлагает оптимальные точки реконструкции и прогнозирует вероятность успеха операции.</p>
+        </div>
+        <div class="project-card">
+        <img src="sec.webp" alt="Project 5">
+        <h3>🔒 Защита данных пациентов</h3>
+        <p>Шифрование, авторизация и контроль доступа к медицинским записям.</p>
+        </div>
+        <div class="project-card">
+        <img src="sosudi_niznea_konechnosti.webp" alt="Project 6">
+        <h3>🦵Реконструктивно-восстановительная хирургия сосудов нижней конечности</h3>
+        <p>Реконструктивно-восстановительная хирургия сосудов нижней конечности — это высокоточная область сосудистой медицины, направленная на восстановление кровотока при нарушениях артериального и венозного русла. Такие вмешательства жизненно необходимы при критической ишемии, облитерирующих заболеваниях артерий, травмах, аневризмах и тромбозах.</p>
+        </div>
+    </div>
+</section>
+<section class="mistakes">
+  <div class="box text-box">
+    <h2>Ошибки молодости в науке 🎬</h2>
+    <p>
+      Аспирационный синдром у новорождённых — это состояние, возникающее при попадании
+      в дыхательные пути инородных масс (чаще всего мекония, околоплодных вод или молока),
+      что приводит к дыхательным расстройствам и риску пневмонии.
+    </p>
+  </div>
+  <div class="box video-box">
+    <video controls width="640" height="150">
+      <source src="aspir.webm" type="video/mp4">
+      Ваш браузер не поддерживает видео‑тег.
+    </video>
+  </div>
+</section>
+
+<section class="music">
+  <h2>🎵 Музыкальный раздел</h2>
+  <p>Для расслабления</p>
+  <div class="music-grid">
+    <div class="box music-box">
+      <h3>Трек 1</h3>
+      <audio controls autoplay loop muted preload="auto">
+        <source src="muz1.opus" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио‑тег.
+      </audio>
+    </div>
+    <div class="box music-box">
+      <h3>Трек 2</h3>
+      <audio controls preload="metadata">
+        <source src="muz2.opus" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио‑тег.
+      </audio>
+    </div>
+  </div>
+</section>
+
+<section class="skills">
+  <h2>💼 Профессиональные навыки</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>🔧 Технические</h3>
+      <ul>
+        <li>Продвинутые навыки CSS, Flexbox, Grid</li>
+        <li>Адаптивная и мобильная верстка</li>
+        <li>Кросс-браузерная оптимизация</li>
+        <li>Junior Developer / Designer Python, Java </li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>🎨 Креативные</h3>
+      <ul>
+        <li>Разработка визуальных концепций</li>
+        <li>Минималистичные и профессиональные интерфейсы</li>
+        <li>Баланс эстетики и функциональности</li>
+      </ul>
+    </div>
+    <div class="skill-card">
+      <h3>⚡ Рабочие качества</h3>
+      <ul>
+        <li>Итеративный подход и оптимизация</li>
+        <li>Внимание к деталям</li>
+        <li>Соединение аналитики и творчества</li>
+        <li>Эффективность и скорость работы</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="card">
+  <section class="scientist-card">
+  <img src="favicon.jpg" alt="spaci i sochrani">
+  <h3>Maksim Sheludzko</h3>
+  <p>В настоящее время врач-хирург</p>
+    <div class="social-links">
+      <a href="#career" target="_blank">📖 Биография</a>
+      <a href="https://elib.gsmu.by/discover?scope=%2F&query=%D1%88%D0%B5%D0%BB%D1%83%D0%B4%D1%8C%D0%BA%D0%BE+%D0%BC+%D0%BE+&submit=" target="_blank">🔬 Публикации</a>
+      <a href="https://nagrady.by/persona/90826/"  target="nagrad">🏆 Награды </a>
+      </div>
+    </section>
+</div>
+<section id="about" class="About_me">
+  <h2 id="career">👤 Моя карьера</h2>
+  <div class="card_about_me">
+    <div class="job-card">🔧 Автослесарь 2 разряда, водитель категории B, C, D</div>
+    <div class="job-card">🏢 Заместитель директора СТО</div>
+    <div class="job-card">💆 Массажист</div>
+    <div class="job-card">💻 Программист-аналитик</div>
+    <div class="job-card">⚕️ Врач-хирург</div>
+  </div>
+</section>
+</main>
+<aside>
+  <section id="contacts" class="contacts">
+    <h2>📞 Контакты</h2>
+    <div class="contacts-grid">
+      <div class="box contact-box">
+        <h3>📧 Email</h3>
+        <p><a href="maksimmalinin28@mail.com">maksimmalinin28@mail.com</a></p>
+      </div>
+      <div class="box contact-box">
+        <h3>📱 Телефон</h3>
+        <p><a href="tel:+375293333333">+375 29 333 33 33</a></p>
+      </div>
+      <div class="box contact-box">
+        <h3>🌐 Соцсети</h3>
+        <p>
+          <a href="https://t.me/" target="_blank">Telegram</a><br>
+        </p>
+      </div>
+    </div>
+  </section>
+</aside>
+
+</div>
+<footer class="inf">
+  <canvas id="footer-stars"></canvas>
+</footer>
+<script>/*Честно стырил с интернета */
+    // показываем карточки при загрузке страницы
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".services-grid").classList.add("show");
+  });
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  const overlay = document.getElementById('overlay');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    burger.classList.remove('active');
+    navLinks.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      burger.classList.remove('active');
+      navLinks.classList.remove('show');
+      overlay.classList.remove('show');
+    });
+  });
+
+  const sections = document.querySelectorAll("section");
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navItems.forEach(item => {
+      item.classList.remove("active");
+      if (item.getAttribute("href").slice(1) === current) {
+        item.classList.add("active");
+      }
+    });
+  });
+  /*раздел выпендрежа */
+  const canvas = document.getElementById("footer-stars");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight * 0.2; // 20% от высоты экрана
+}
+resizeCanvas();
+window.addEventListener("resize", () => {
+  resizeCanvas();
+  initStars(); 
+});
+
+let stars = [];
+function initStars() {
+  stars = [];
+  const numStars = Math.floor(canvas.width / 10); 
+  for (let i = 0; i < numStars; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.5,
+      alpha: Math.random(),
+      dAlpha: (Math.random() * 0.02) + 0.005
+    });
+  }
+}
+initStars();
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  stars.forEach(star => {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,255,255,${star.alpha})`;
+    ctx.fill();
+
+    star.alpha += star.dAlpha;
+    if (star.alpha <= 0 || star.alpha >= 1) star.dAlpha *= -1;
+  });
+
+  // Текст внизу нервы сдали 
+  ctx.font = "14px Space Grotesk";
+  ctx.fillStyle = "#3FA2F6";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "bottom";
+  ctx.shadowColor = "#3FA2F6";
+  ctx.shadowBlur = 10;
+  ctx.fillText("Лендинг создан в 2025 году. Все права защищены", canvas.width / 2, canvas.height - 20);
+
+  requestAnimationFrame(drawStars);
+}
+
+drawStars();
+
+
+</script>
+</body>
+</html>
